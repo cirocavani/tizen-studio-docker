@@ -1,4 +1,4 @@
-# Tizen Studion on Docker
+# Tizen Studio on Docker
 
 ```sh
 ./build_image.sh
