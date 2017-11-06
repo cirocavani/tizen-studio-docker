@@ -17,6 +17,6 @@ TIZEN_CLI=_deps/web-cli_Tizen_Studio_2.0_ubuntu-64.bin
 if [ ! -f $TIZEN_CLI ]; then
     curl -k -L \
         http://download.tizen.org/sdk/Installer/tizen-studio_2.0/web-cli_Tizen_Studio_2.0_ubuntu-64.bin \
-        -o $TZEN_CLI
-    chmod +x $TZEN_CLI
+        -o $TIZEN_CLI
+    chmod +x $TIZEN_CLI
 fi
