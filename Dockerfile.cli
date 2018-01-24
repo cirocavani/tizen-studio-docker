@@ -52,15 +52,4 @@ RUN ./web-cli_Tizen_Studio_2.1_ubuntu-64.bin \
     /home/tizen/tizen-studio && \
     rm web-cli_Tizen_Studio_2.1_ubuntu-64.bin
 
-RUN tizen-studio/package-manager/package-manager-cli.bin \
-    install \
-    --accept-license \
-    MOBILE-4.0,\
-    WEARABLE-4.0,\
-    TV-4.0,\
-    IOT-Headed-4.0,\
-    IOT-Headless-4.0,\
-    cert-add-on
-
-COPY --chown=tizen tizen-start.sh .
-CMD /home/tizen/tizen-start.sh
+CMD ["/bin/bash"]
