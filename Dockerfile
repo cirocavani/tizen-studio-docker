@@ -58,6 +58,7 @@ RUN tizen-studio/package-manager/package-manager-cli.bin \
     MOBILE-4.0,\
     WEARABLE-4.0,\
     TV-4.0,\
+    TV-4.0-samsung-public,\
     IOT-Headed-4.0,\
     IOT-Headless-4.0,\
     cert-add-on
