@@ -1,5 +1,7 @@
 FROM ubuntu:16.04
 
+ENV LANG C.UTF-8
+ENV LC_ALL C.UTF-8
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN useradd -m -G sudo tizen && \
@@ -46,10 +48,10 @@ RUN tar zxf jdk-8u152-linux-x64.tar.gz && \
     echo "PATH=$PATH:$(pwd)/jdk1.8.0_152/bin" >> .profile && \
     rm jdk-8u152-linux-x64.tar.gz
 
-COPY --chown=tizen _deps/web-cli_Tizen_Studio_2.1_ubuntu-64.bin .
-RUN ./web-cli_Tizen_Studio_2.1_ubuntu-64.bin \
+COPY --chown=tizen _deps/web-cli_Tizen_Studio_2.2_ubuntu-64.bin .
+RUN ./web-cli_Tizen_Studio_2.2_ubuntu-64.bin \
     --accept-license \
     /home/tizen/tizen-studio && \
-    rm web-cli_Tizen_Studio_2.1_ubuntu-64.bin
+    rm web-cli_Tizen_Studio_2.2_ubuntu-64.bin
 
 CMD ["/bin/bash"]

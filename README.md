@@ -4,16 +4,16 @@
 ./build_image.sh
 ./create_container.sh
 
-docker start tizen_studio
+docker start tizen-studio
 ```
 
 ## Package list
 
 ```sh
-docker build -t tizen/studio-cli:2.1 -f Dockerfile.cli .
-docker create --name tizen_cli --hostname tizen-cli tizen/studio-cli:2.1
-docker start tizen_cli
-docker attach tizen_cli
+docker build -t tizen/studio-cli:2.2 -f Dockerfile-cli .
+docker create -it --name tizen-cli --hostname tizen-cli tizen/studio-cli:2.2
+docker start tizen-cli
+docker attach tizen-cli
 ```
 
 Command:

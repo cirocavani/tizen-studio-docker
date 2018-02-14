@@ -12,11 +12,11 @@ if [ ! -f $JAVA_JDK ]; then
         -o $JAVA_JDK
 fi
 
-TIZEN_CLI=_deps/web-cli_Tizen_Studio_2.1_ubuntu-64.bin
+TIZEN_CLI=_deps/web-cli_Tizen_Studio_2.2_ubuntu-64.bin
 
 if [ ! -f $TIZEN_CLI ]; then
     curl -k -L \
-        http://download.tizen.org/sdk/Installer/tizen-studio_2.1/web-cli_Tizen_Studio_2.1_ubuntu-64.bin \
+        http://download.tizen.org/sdk/Installer/tizen-studio_2.2/web-cli_Tizen_Studio_2.2_ubuntu-64.bin \
         -o $TIZEN_CLI
     chmod +x $TIZEN_CLI
 fi
