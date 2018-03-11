@@ -42,11 +42,11 @@ WORKDIR /home/tizen
 ENV BASH_ENV /home/tizen/.profile
 SHELL ["/bin/bash", "-c"]
 
-COPY --chown=tizen _deps/jdk-8u152-linux-x64.tar.gz .
-RUN tar zxf jdk-8u152-linux-x64.tar.gz && \
-    echo "JAVA_HOME=$(pwd)/jdk1.8.0_152" >> .profile && \
-    echo "PATH=$PATH:$(pwd)/jdk1.8.0_152/bin" >> .profile && \
-    rm jdk-8u152-linux-x64.tar.gz
+COPY --chown=tizen _deps/jdk-8u162-linux-x64.tar.gz .
+RUN tar zxf jdk-8u162-linux-x64.tar.gz && \
+    echo "JAVA_HOME=$(pwd)/jdk1.8.0_162" >> .profile && \
+    echo "PATH=$PATH:$(pwd)/jdk1.8.0_162/bin" >> .profile && \
+    rm jdk-8u162-linux-x64.tar.gz
 
 COPY --chown=tizen _deps/web-cli_Tizen_Studio_2.2_ubuntu-64.bin .
 RUN ./web-cli_Tizen_Studio_2.2_ubuntu-64.bin \
@@ -65,5 +65,4 @@ RUN tizen-studio/package-manager/package-manager-cli.bin \
     IOT-Headless-4.0,\
     cert-add-on
 
-COPY --chown=tizen tizen-start.sh .
-CMD /home/tizen/tizen-start.sh
+CMD ["/bin/bash", "--login"]

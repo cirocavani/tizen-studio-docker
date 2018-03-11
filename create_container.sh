@@ -1,7 +1,14 @@
 #!/bin/bash
 set -eu
 
+cd $(dirname "$0")
+
+if [ ! -z "$(docker ps -q -a -f name=tizen-studio$)" ]; then
+    docker rm tizen-studio
+fi
+
 docker create \
+    -it \
     --privileged \
     --name tizen-studio \
     --hostname tizen-studio \

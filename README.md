@@ -5,6 +5,14 @@
 ./create_container.sh
 
 docker start tizen-studio
+docker attach tizen-studio
+# Press ENTER to see the prompt
+```
+
+Command:
+
+```sh
+tizen-studio/ide/TizenStudio.sh
 ```
 
 ## Package list
@@ -14,6 +22,7 @@ docker build -t tizen/studio-cli:2.2 -f Dockerfile-cli .
 docker create -it --name tizen-cli --hostname tizen-cli tizen/studio-cli:2.2
 docker start tizen-cli
 docker attach tizen-cli
+# Press ENTER to see the prompt
 ```
 
 Command:
