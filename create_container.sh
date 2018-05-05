@@ -4,7 +4,7 @@ set -eu
 cd $(dirname "$0")
 
 if [ ! -z "$(docker ps -q -a -f name=tizen-studio$)" ]; then
-    docker rm tizen-studio
+    docker rm -f tizen-studio
 fi
 
 docker create \
@@ -14,6 +14,6 @@ docker create \
     --hostname tizen-studio \
     --env DISPLAY=$DISPLAY \
     --volume /tmp/.X11-unix:/tmp/.X11-unix \
-    tizen/studio:2.2
+    tizen/studio:2.3
 
 echo "Done!"

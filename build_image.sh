@@ -5,6 +5,6 @@ cd $(dirname "$0")
 
 ./setup.sh
 
-docker build -t tizen/studio:2.2 -f Dockerfile .
+docker build -t tizen/studio:2.3 -f Dockerfile .
 
 echo "Done!"

@@ -1,25 +1,37 @@
 # Tizen Studio on Docker
 
+Runs Tizen Studio on Docker.
+
+## Setup
+
+Assumes:
+
+* KVM and Libvirt installed in the Host to enable Emulator hardware acceleration
+* X running in the Host, same user of Docker Container (1000)
+
 ```sh
 ./build_image.sh
 ./create_container.sh
+./kvm-update.sh
 
 docker start tizen-studio
 docker attach tizen-studio
 # Press ENTER to see the prompt
 ```
 
-Command:
+**Starting IDE**
+
+Runing from inside the container, IDE window opens in the Host X Display.
 
 ```sh
-tizen-studio/ide/TizenStudio.sh
+tizen-studio/ide/TizenStudio.sh > ~/ide.log 2>&1 &
 ```
 
 ## Package list
 
 ```sh
-docker build -t tizen/studio-cli:2.2 -f Dockerfile-cli .
-docker create -it --name tizen-cli --hostname tizen-cli tizen/studio-cli:2.2
+docker build -t tizen/studio-cli:2.3 -f Dockerfile-cli .
+docker create -it --name tizen-cli --hostname tizen-cli tizen/studio-cli:2.3
 docker start tizen-cli
 docker attach tizen-cli
 # Press ENTER to see the prompt
