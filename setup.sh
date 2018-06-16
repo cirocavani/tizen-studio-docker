@@ -13,8 +13,8 @@ if [ ! -f _deps/$JAVA_JDK ]; then
         -o _deps/$JAVA_JDK
 fi
 
-TIZEN_CLI=web-cli_Tizen_Studio_2.3_ubuntu-64.bin
-TIZEN_URL=http://download.tizen.org/sdk/Installer/tizen-studio_2.3/web-cli_Tizen_Studio_2.3_ubuntu-64.bin
+TIZEN_CLI=web-cli_Tizen_Studio_2.4_ubuntu-64.bin
+TIZEN_URL=http://download.tizen.org/sdk/Installer/tizen-studio_2.4/web-cli_Tizen_Studio_2.4_ubuntu-64.bin
 
 if [ ! -f _deps/$TIZEN_CLI ]; then
     curl -k -L \

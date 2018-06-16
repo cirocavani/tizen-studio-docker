@@ -14,6 +14,6 @@ docker create \
     --hostname tizen-studio \
     --env DISPLAY=$DISPLAY \
     --volume /tmp/.X11-unix:/tmp/.X11-unix \
-    tizen/studio:2.3
+    tizen/studio:2.4
 
 echo "Done!"
